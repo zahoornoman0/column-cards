@@ -1,0 +1,116 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+@media(min-width:500px){
+    body {
+    font-size: 15px;
+    height: 100vh;
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+}
+img, h2, p, button{
+    margin-bottom: 10%;
+}
+p{
+    color: var(--transparent-white);
+}
+button{
+    background-color: var(--very-light-gray);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 50px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid var(--very-light-gray);
+}
+h2{
+    color: var(--very-light-gray);
+}
+.orange{
+    background-color: var(--bright-orange);
+    padding: 30px;
+    border-radius: 10px 0 0 10px;
+}
+.orange button{
+    color: var(--bright-orange);
+}
+.orange button:hover{
+    color: var(--very-light-gray);
+}
+.dark-cyan{
+    background-color: var(--dark-cyan);
+    padding: 30px;
+}
+.dark-cyan button{
+    color: var(--dark-cyan);
+}
+.dark-cyan button:hover{
+    color: var(--very-light-gray);
+}
+.very-dark-cyan{
+    background-color: var(--very-dark-cyan);
+    padding: 30px;
+    border-radius: 0 10px 10px 0;
+}
+.very-dark-cyan button{
+    color: var(--very-dark-cyan);
+}
+.very-dark-cyan button:hover{
+    color: var(--very-light-gray);
+}
+
+@media(max-width:500px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 30px 20px;
+    }
+    .orange{
+        grid-column: 1;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .dark-cyan{
+        grid-column: 1;
+    }
+    .very-dark-cyan{
+        grid-column: 1;
+        border-radius: 0 0 10px 10px;
+    }
+    
+}
